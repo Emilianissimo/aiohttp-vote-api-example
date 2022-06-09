@@ -1,0 +1,10 @@
+psycopg2-binary
+aiohttp~=3.8.1
+aiohttp-jinja2
+peewee-async
+peewee-migrate
+pyyaml~=6.0
+aiopg[sa]~=1.3.3
+
+SQLAlchemy~=1.4.37
+Jinja2~=3.1.2

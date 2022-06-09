@@ -1,0 +1,25 @@
+{% extends 'layouts/layout.html' %}
+
+{% block title %}
+Questions
+{% endblock %}
+
+{% block content %}
+    <div class="row justify-content-center my-2 text-center">
+        {% if questions %}
+            {% for question in questions %}
+                <div class="col-md-5 my-3">
+                    <a href="{{url('views.question', pk=question.id)}}" class="text-decoration-none">
+                        <div class="alert alert-{{ loop.cycle('primary', 'success', 'warning') }}">{{ question.question_text }}</div>
+                    </a>
+                </div>
+            {% endfor %}
+        {% else %}
+            <div class="col-md-10 my-3">
+                <div class="alert alert-danger">
+                    Nothing to show!
+                </div>
+            </div>
+        {% endif %}
+    </div>
+{% endblock %}
